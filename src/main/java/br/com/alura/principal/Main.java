@@ -1,5 +1,6 @@
 package br.com.alura.principal;
 
+import br.com.alura.modelos.MinhasPreferidas;
 import br.com.alura.modelos.Musicas;
 import br.com.alura.modelos.Podcasts;
 
@@ -31,5 +32,10 @@ public class Main {
         System.out.println();
 
         System.out.println(meuPodcast);
+
+        MinhasPreferidas preferidas = new MinhasPreferidas();
+
+        preferidas.inclui(meuPodcast);
+        preferidas.inclui(minhaMusica);
     }
 }

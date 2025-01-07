@@ -64,4 +64,19 @@ public class Musicas extends Audio {
                 """, artista, album, genero, getTitulo(), getDuracao(), getTotalReproducoes(), getTotalCurtidas(),
                 getClassificacao());
     }
+
+    @Override
+    public int getClassificacao() {
+        if (this.getTotalReproducoes() > 2000) {
+            return 5;
+        } else if (this.getTotalReproducoes() > 500) {
+            return 4;
+        } else if (this.getTotalReproducoes() > 100) {
+            return 3;
+        } else if (this.getTotalReproducoes() > 50) {
+            return 2;
+        } else {
+            return 1;
+        }
+    }
 }

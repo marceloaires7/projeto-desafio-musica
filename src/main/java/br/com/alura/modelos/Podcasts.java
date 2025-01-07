@@ -51,4 +51,19 @@ public class Podcasts extends Audio {
                 """, apresentador, descricao, getTitulo(), getDuracao(), getTotalReproducoes(), getTotalCurtidas(),
                 getClassificacao());
     }
+
+    @Override
+    public int getClassificacao() {
+        if (this.getTotalCurtidas() > 500) {
+            return 5;
+        } else if (this.getTotalCurtidas() > 100) {
+            return 4;
+        } else if (this.getTotalCurtidas() > 50) {
+            return 3;
+        } else if (this.getTotalCurtidas() > 10) {
+            return 2;
+        } else {
+            return 1;
+        }
+    }
 }
